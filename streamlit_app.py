@@ -549,8 +549,8 @@ def render_prediction_module() -> None:
     bmi_options = sorted(raw_df["BMI Category"].dropna().unique())
 
     st.markdown("### Tell us about yourself")
-    c1, c2, c3 = st.columns(3, gap="large")
-    c4, c5, c6 = st.columns(3, gap="large")
+    c1, c2, c6 = st.columns(3, gap="large")
+    c4, c5, c3 = st.columns(3, gap="large")
 
     with c1:
         age = st.number_input("Age", min_value=10, max_value=90, value=int(raw_df["Age"].median()))
@@ -808,3 +808,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
