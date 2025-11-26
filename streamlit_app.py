@@ -114,7 +114,7 @@ def inject_custom_styles() -> None:
                 transition: transform 0.18s ease, box-shadow 0.18s ease;
             }
             .option-card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px rgba(31,42,68,0.06); }
-            .recipe-card, .analysis-card, .result-card {
+            .recipe-card,  .result-card {
                 background: linear-gradient(180deg, #d9e5ff, #ffffff);
                 border-radius: var(--card-radius);
                 padding: 20px;
@@ -122,6 +122,14 @@ def inject_custom_styles() -> None:
                 margin-bottom: 20px;
 
             }
+             .analysis-card {
+            background: var(--bg); 
+            border-radius: var(--card-radius);
+            padding: 20px;
+            box-shadow: var(--soft-shadow);
+            margin-bottom: 20px;
+        }
+
             .result-card {
                 border: 1px solid rgba(12,43,78,0.08);
                 text-align: center;
@@ -808,4 +816,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
